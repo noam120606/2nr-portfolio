@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head><%- include('partials/head.ejs'); %></head>
+    <body>
+        <%- include('partials/header.ejs'); %>
+        <content>
+            <h1>Contact</h1>
+            <div class="paragraph">
+                <p>N’hésitez pas à nous contacter pour donner vie à votre site web !</p>
+                <p>Ensemble, créons une vitrine digitale qui vous ressemble et qui répond parfaitement à vos attentes. Votre projet, notre passion – contactez-nous dès maintenant !</p>
+                <p>Par e-mail : <a href="mailto:contact2NR@2NR.fr">contact2NR@2NR.fr</a> ou directement par ce formulaire :</p>
+            </div>
+            <form method="post" action="/message">
+                <div class="form">
+                    <span class="reply" style="color: <%= success===false ? 'red' : 'green' %>"><%= success===true ? 'Le message à été envoyé !' : success===false ? 'Une erreur est survenue...' : '' %></span>
+                    <label for="nom">Votre nom :</label>
+                    <input type="text" name="nom" id="nom" placeholder="nom" required/>
+                    <label for="prenom">Votre prénom :</label>
+                    <input type="text" name="prenom" id="prenom" placeholder="prénom" required/>
+                    <label for="email">Votre adresse e-mail :</label>
+                    <input type="email" name="email" id="email" placeholder="e-mail" required/>
+                    <label for="message">Votre message :</label>
+                    <textarea name="message" id="message" placeholder="message" required></textarea>
+                    <input type="submit" value="Envoyer" class="submit"/>
+                </div>
+            </form>
+        </content>
+        <%- include('partials/footer.ejs'); %>
+    </body>
+</html>
