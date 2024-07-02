@@ -14,7 +14,7 @@ header {
 }
 
 .logo {
-    width: 25%;
+    width: 40%;
     height: 100px;
     margin-right: 32px;
     display: flex;
@@ -34,9 +34,24 @@ header {
     padding: 0;
 }
 .headertitle {
-    display: inline-block;
     margin-left: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.headertitle h1 {
+    display: inline-block;
     font-size: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.headertitle p {
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 footer {
     background-color: #D9D9D9;
@@ -54,7 +69,11 @@ footer {
     font-size: 16px;
     margin: 0;
 }
-
+.credits a {
+    padding-left: 16px;
+    text-decoration: underline;
+    color: #222;
+}
 
 nav {
     display: flex;
@@ -62,7 +81,7 @@ nav {
     align-items: center;
     background-color: #D9D9D9;
     padding: 10px;
-    width: 75%;
+    width: 60%;
 }
 
 nav a {
@@ -80,9 +99,6 @@ nav a:not(:last-child) {
     margin-right: 20px;
 }
 
-
-
-
 content h1 {
     text-align: center;
     margin-top: 50px;
@@ -90,13 +106,12 @@ content h1 {
 }
 
 content p {
-    text-align: left;
+    text-align: justify;
     margin-top: 50px;
     font-size: 32px;
 }
 
 .paragraph {
-    text-align: left;
     width: 60%;
     margin: 0 auto;
     padding: 20px;
