@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head><%- include('partials/head.ejs'); %></head>
+    <body>
+        <%- include('partials/header.ejs'); %>
+        <content>
+            <h1>Tu t'es perdu ?</h1>
+            <div class="box-404">
+                <p>Cette page n'existe pas.</p>
+                <div class="text-404">
+                    <% if (!egg) { %>
+                        <h1>404</h1>
+                        <p>Page not found.</p>
+                    <% } else { %>
+                        <p>Pour te réconforter, voici un pamplemousse</p>
+                        <img src="images/pamplemousse.jpg" />
+                    <% } %>
+                </div>
+            </div>
+        </content>
+        <%- include('partials/footer.ejs'); %>
+    </body>
+</html>
