@@ -1,6 +1,6 @@
 module.exports = {
     url: "/terms",
-    protocol: "GET",
+    method: "GET",
     run: (app, req, res) => {
 
         res.render('terms');

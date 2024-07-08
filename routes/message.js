@@ -2,12 +2,15 @@ const sendMessage = require('../functions/sendMessage');
 
 module.exports = {
     url: "/message",
-    protocol: "POST",
+    method: "POST",
 
     run: async (app, req, res) => {
 
         const data = req.body;
         if (!data.nom || !data.prenom || !data.email || !data.message) return res.redirect('/contact?success=0');
+
+        console.log(`[MESSAGE] : ${data.nom} ${data.prenom} (${data.email})`);
+        console.log("agent:" , req.headers['user-agent']);
         
         const message = {
             content: `||<@457926967661035522>, <@295119133530652672>||`,

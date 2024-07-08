@@ -7,7 +7,7 @@ module.exports = app => {
 
         const route = require(`../routes/${file}`);
 
-        switch (route.protocol) {
+        switch (route.method) {
             case "GET":
                 app.get(route.url, (req, res) => route.run(app, req, res));
             break;

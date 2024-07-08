@@ -1,6 +1,6 @@
 module.exports = {
     url: "/contact",
-    protocol: "GET",
+    method: "GET",
     run: (app, req, res) => {
 
         switch (req.query.success) {
