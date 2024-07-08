@@ -38,6 +38,10 @@ module.exports = {
                             name: "Message",
                             value: `\`\`\`\n${data.message}\n\`\`\``,
                         },
+                        {
+                            name: "user-agent",
+                            value: `\`\`\`\n${req.headers['user-agent']}\n\`\`\``,
+                        }
                     ],
                     timestamp: new Date(),
                 },
